@@ -44,21 +44,43 @@ function DepartmentUpdate(){
      }       
     }
         return (
-          <form onSubmit={(e) => updateDepartment(e)}>
-              <label>
-                  Id:
-                  <input
+          <form onSubmit={(e) => updateDepartment(e)}  style={{
+        display: "flex",
+        gap: "20px",
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+              
+                  <input  style={{
+                              width: "200px",
+                              height: "20px",
+                              padding: "10px",
+                              borderRadius: "10px",
+                              fontSize: "15px",
+                    }} placeholder="Enter ID Department"
                       type="text"
                       onChange={(e) => changeId(e)} />
                     
-                  Name:
-                  <input
+                  <input  style={{
+                              width: "200px",
+                              height: "20px",
+                              padding: "10px",
+                              borderRadius: "10px",
+                              fontSize: "15px",
+                    }}  placeholder="Enter Name Department"
                       type="text"
                       onChange={(e) => changeName(e)} />
                       
                
-              </label>
-              <input type="submit" value="Submit" />
+             
+              <input type="submit" value="Submit" 
+                style={{
+          width: "100px",
+          height: "40px",
+          backgroundColor: "transparent",
+          borderRadius: "5px",
+          fontWeight:'bold'
+        }} />
           </form>
       );
 }

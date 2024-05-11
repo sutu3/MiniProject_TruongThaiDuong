@@ -1,20 +1,23 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: `http://localhost:8080/api`,
-    responseType: `json`
+  baseURL: `http://26.232.136.42:8080/api`,
+  responseType: `json`,
 });
 
-axiosClient.interceptors.request.use(async (config) =>{
-    return config
+axiosClient.interceptors.request.use(async (config) => {
+  return config;
 });
-    
-axiosClient.interceptors.response.use((resopnes)=>{
-    if(resopnes && resopnes.data){
-        return resopnes.data;
+
+axiosClient.interceptors.response.use(
+  (resopnes) => {
+    if (resopnes && resopnes.data) {
+      return resopnes.data;
     }
-},(error)=>{
+  },
+  (error) => {
     throw error;
-});
+  }
+);
 
-export default axiosClient
+export default axiosClient;

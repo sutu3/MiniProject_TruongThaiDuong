@@ -48,24 +48,54 @@ function EmployeeUpdate1(){
     
      
         return (
-          <form onSubmit={(e) => updateEmployee(e)}>
-              <label>
-                  Id:
-                  <input
+          <form onSubmit={(e) => updateEmployee(e)} 
+           style={{
+        display: "flex",
+        flexWrap:'wrap',
+        gap: "20px",
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+              
+                  <input style={{
+                              width: "200px",
+                              height: "20px",
+                              padding: "10px",
+                              borderRadius: "10px",
+                              fontSize: "15px",
+                    }} placeholder="Enter ID Employee"
                       type="text"
                       onChange={(e) => changeId(e)} />
                      
-                  Name:
-                  <input
+                  
+                  <input style={{
+                              width: "200px",
+                              height: "20px",
+                              padding: "10px",
+                              borderRadius: "10px",
+                              fontSize: "15px",
+                    }} placeholder="Enter Name Employee"
                       type="text"
                       onChange={(e) => changeName(e)} />
                     
-                 Department Id:
-                  <input
+                 
+                  <input style={{
+                              width: "200px",
+                              height: "20px",
+                              padding: "10px",
+                              borderRadius: "10px",
+                              fontSize: "15px",
+                    }} placeholder="Enter ID Department"
                       type="text"
                       onChange={(e) => changeDepartmentId(e)} />
-              </label>
-              <input type="submit" value="Submit" />
+              
+              <input type="submit" value="Submit"  style={{
+          width: "100px",
+          height: "40px",
+          backgroundColor: "transparent",
+          borderRadius: "5px",
+          fontWeight:'bold'
+        }} />
           </form>
       );
       

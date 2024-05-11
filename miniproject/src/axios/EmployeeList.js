@@ -24,26 +24,66 @@ function EmployeeList(){
     getListEmployee();
   },[])
     const personList = employee.map((item,index) =>
-        <li key={item.employeeID}>
-           <pre>
-            ID: {item.employeeID}<br/>
-            Employee name: {item.employeeName}<br/>
-            Department ID: {item.department}
+        <li key={item.employeeID} 
+      style={{
+        display: "flex",
+        gap: "30px",
+        marginBottom: "10px",
+        border: "2px solid black",
+        width: "400px",
+        margin: "auto",
+        height: "80px",
+        marginBottom: "10px",
+        borderRadius: "5px",
+        textAlign: "left",
+      }}>
+           <div 
+        style={{
+          padding: "10px",
+        }}>
+            <span style={{ fontWeight: "bold" }}>ID:</span>{item.employeeID}<br/>
+            <span style={{ fontWeight: "bold" }}>Employee name: </span> {item.employeeName}<br/>
+            <span style={{ fontWeight: "bold" }}> Department ID: </span>{item.department}
 
-           </pre>
+           </div>
             
         </li>)
    return(
     <>
       <EmployeeContext.Provider value={{employee,setEmployee}}>
-         <p>Thêm</p>
+         <p 
+          style={{
+            fontSize: "40px",
+            fontWeight: "bold",
+            textAlign: "left",
+            marginLeft: "10px",
+          }}>Thêm</p>
           <EmployeeCreate1/>
-          <p>Xóa</p>
+          <p
+          style={{
+            fontSize: "40px",
+            fontWeight: "bold",
+            textAlign: "left",
+            marginLeft: "10px",
+          }}>Xóa</p>
           <EmployeeDelete1/>
-          <p>Sửa</p>
+          <p
+          style={{
+            fontSize: "40px",
+            fontWeight: "bold",
+            textAlign: "left",
+            marginLeft: "10px",
+          }}>Sửa</p>
           <EmployeeUpdate1/>
        </EmployeeContext.Provider>
-       <ul style={{listStyle:'none'}}>
+       <ul 
+        style={{
+          height: "500px",
+          overflow: "scroll",
+          gap: "30px",
+          border:'2px solid black'
+
+        }}>
         {personList}
        </ul>
     </>     
