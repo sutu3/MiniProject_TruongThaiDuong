@@ -28,7 +28,7 @@ function EmployeeList(){
            <pre>
             ID: {item.employeeID}<br/>
             Employee name: {item.employeeName}<br/>
-            Department ID: {item.departmentID}
+            Department ID: {item.department}
 
            </pre>
             

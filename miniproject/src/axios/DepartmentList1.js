@@ -25,10 +25,10 @@ function DepartmentList1(){
 
     const deparmentList = department.map(
         department=>
-        <li key={department.id}>
+        <li key={department.id} style={{color:"red"}}>
             <pre>
             ID: {department.id}<br/>
-            Department name: {department.name} 
+            Department name: {department.departmentName} 
            
             </pre>
           
